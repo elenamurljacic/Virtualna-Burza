@@ -2,9 +2,7 @@ table{
   table-layout: fixed;
 }
 
-td{
-  width: 50%;
-}
+
 
 html{
   background:
@@ -22,4 +20,3 @@ body{
   z-index:1;
   opacity: 0.8;
 }
-

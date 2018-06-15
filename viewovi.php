@@ -319,17 +319,17 @@ function crtaj_ulogiraniKorisnik()
 		echo $kor->ime . " " . $kor->prezime; ?>
 	</h3>
 	<br/>
-  <p>Ukupna zarada: <?php echo ukupnaZaradaKorisnika( $_SESSION['id_user'] ); ?></p><br>
-  <p>Dnevna zarada: <?php echo dnevnaZaradaKorisnika( $_SESSION['id_user']) ?></p><br>
-
+  <p>Ukupna zarada: <?php echo ukupnaZaradaKorisnika( $_SESSION['id_user'] ) . ' kn'; ?></p><br>
+  <p>Dnevna zarada: <?php echo dnevnaZaradaKorisnika( $_SESSION['id_user']) . ' kn' ?></p><br>
+<div class="table-responsive">
   <label for="transakcije">Povijest transakcija:</label>
   <table name="transkacije" class="table">
     <tr>
       <th>Kupac</th>
-			<th>Tvrtka</th>
       <th>Prodavač</th>
+      <th>Tvrtka</th>
       <th>Vrijeme transakcije</th>
-      <th>Cijena dionce</th>
+      <th>Cijena dionice</th>
       <th>Količina dionica</th>
     </tr>
     <?php
@@ -356,7 +356,7 @@ function crtaj_ulogiraniKorisnik()
       <tr>
         <td><?php echo $kupac; ?></td>
         <td><?php echo $prodavac; ?></td>
-				<td><?php echo $tvrtka; ?></td>
+		<td><?php echo $tvrtka; ?></td>
         <td><?php echo $transakcija->vrijeme_transakcije; ?></td>
         <td><?php echo $transakcija->cijena_dionice.' kn'; ?></td>
         <td><?php echo $transakcija->kolicina_dionica; ?></td>
@@ -365,6 +365,7 @@ function crtaj_ulogiraniKorisnik()
     }
 	  ?>
 	  </table>
+	</div>
 	</div>
 
 	<?php
